@@ -1,5 +1,5 @@
 package SearchingAlgorithms;
-
+import java.util.*;
 public class CountRotation {
 
 		public static int findRotationCount(int[] A)
@@ -40,7 +40,16 @@ public class CountRotation {
 
 		public static void main(String[] args)
 		{
-			int[] A = { 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7 };
+			// demo input: int[] A = { 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7 };
+			Scanner in = new Scanner(System.in);
+			System.out.println(""Enter array dimension:");
+			      int n = in.nextInt();
+					   int A[]=new int[n];
+					   System.out.println("Enter array elements:");
+					   for(int i=0;i<n;i++)
+					   {
+						   A[i]=in.nextInt();
+					   }
 
 			System.out.println("The array is rotated " + findRotationCount(A) + " times");
 		}
